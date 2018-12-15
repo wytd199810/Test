@@ -1,0 +1,144 @@
+/* 背景图 */
+.a_background{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.a_background_top{
+	width: 100%;
+	height: 71.6%;
+	background-image: url(../images/background/a_background_top.png);
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.a_background_middle{
+	width: 100%;
+	height: 13.1%;
+	background-image: url(../images/background/a_background_middle.png);
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.a_background_botton{
+	width: 100%;
+	height: 15.3%;
+	background-image: url(../images/background/a_background_botton.png);
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+/* 太阳自转及其动画 */
+#sun{
+	background: url(../images/sun.png) no-repeat;
+	position: absolute;
+	z-index: 1;
+	top:-30px;
+	height: 201px;
+	width: 201px;
+	right: 40%;
+}
+.rotation{
+	/* 定义动画名称 */
+	-webkit-animation-name: rotation;
+	-o-animation-name: rotation;
+	animation-name: rotation;
+	/* 完成这个动画所需要的时间 */
+	-webkit-animation-duration: 30s;
+	-o-animation-duration: 30s;
+	animation-duration: 30s;
+}
+/* 太阳位移变化 */
+@-webkit-keyframes rotation{
+	0%{
+		transform:translateX(0) translateY(0);
+	}
+	100%{
+		transform:translateX(-2000px) translateY(200px);
+	}
+}
+@-moz-keyframes rotation{
+	0%{
+		transform:translateX(0) translateY(0);
+	}
+	100%{
+		transform:translateX(-2000px) translateY(200px);
+	}
+}
+
+/* 云的样式及动画 */
+.cloud{
+	z-index: 2;
+	position: absolute;
+}
+.cloud1{
+	background: url(../images/cloud1.png) no-repeat;
+	width: 181px;
+	height: 101px;
+	left: -5%;
+	top:15%;
+}
+.cloud2{
+	background: url(../images/cloud2.png) no-repeat;
+	width: 301px;
+	height: 140px;
+	right:-5%;
+}
+.cloud1Anim{
+	/* 动画命名 */
+	-webkit-animation-name: smallCloud;
+	-o-animation-name: smallCloud;
+	animation-name: smallCloud;
+	/* 完成动画时间 */
+	-webkit-animation-duration: 30s;
+	-o-animation-duration: 30s;
+	animation-duration: 30s;
+	/* 动画播放次数 */
+	-webkit-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.cloud2Anim{
+	/* 动画命名 */
+	-webkit-animation-name: bigCloud;
+	-o-animation-name: bigCloud;
+	animation-name: bigCloud;
+	/* 动画时间 */
+	-webkit-animation-duration: 60s;
+	-o-animation-duration: 60s;
+	animation-duration: 60s;
+	/* 动画播放次数 */
+	-webkit-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+@-webkit-keyframes smallCloud{
+	0%{
+		left:-5%;
+	}
+	100%{
+		left:100%;
+	}
+}
+@-moz-keyframes smallCloud{
+	0%{
+		left:-5%;
+	}
+	100%{
+		left:100%;
+	}
+}
+@-webkit-keyframes bigCloud{
+	0%{
+		right:-5%;
+	}
+	100%{
+		right:100%;
+	}
+}
+@-moz-keyframes bigCloud{
+	0%{
+		right: -5%;
+	}
+	100%{
+		right: 100%;
+	}
+}
